@@ -19,7 +19,6 @@ void setup() {
   pinMode(sensorPin, INPUT_PULLUP); // Use internal pull-up resistor
   display.display(); // show splashscreen
   pinMode(buttonPin, INPUT_PULLUP);  // Set button pin as input with pull-up resistor
-  Serial.begin(9600);               // Initialize serial for debugging
 }
 
 void display_print(String mensagem) {
@@ -40,7 +39,6 @@ void loop() {
   if (buttonState == LOW && lastButtonState == HIGH) {
     // Toggle the variable
     toggleVariable = !toggleVariable; // Toggle between 0 and 1
-    Serial.println(toggleVariable);   // Print the current value to the Serial Monitor
   }
 
   // Update the last button state
